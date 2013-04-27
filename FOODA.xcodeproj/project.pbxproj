@@ -25,6 +25,7 @@
 		1C8DA47E172BC58800A8A2CA /* FDProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA47D172BC58800A8A2CA /* FDProductInfoViewController.m */; };
 		85221935569F45B99579FDD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5253F35D68434FCA94D5B477 /* libPods.a */; };
 		B5086373172BB84500C72DD9 /* FDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086372172BB84500C72DD9 /* FDProduct.m */; };
+		B5086376172BBD9100C72DD9 /* FDProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086375172BBD9100C72DD9 /* FDProductModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		5253F35D68434FCA94D5B477 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5086371172BB84500C72DD9 /* FDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDProduct.h; sourceTree = "<group>"; };
 		B5086372172BB84500C72DD9 /* FDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProduct.m; sourceTree = "<group>"; };
+		B5086374172BBD9100C72DD9 /* FDProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDProductModel.h; sourceTree = "<group>"; };
+		B5086375172BBD9100C72DD9 /* FDProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProductModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 			children = (
 				B5086371172BB84500C72DD9 /* FDProduct.h */,
 				B5086372172BB84500C72DD9 /* FDProduct.m */,
+				B5086374172BBD9100C72DD9 /* FDProductModel.h */,
+				B5086375172BBD9100C72DD9 /* FDProductModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				1C8DA47B172BB5A200A8A2CA /* FDHomeViewController.m in Sources */,
 				B5086373172BB84500C72DD9 /* FDProduct.m in Sources */,
 				1C8DA47E172BC58800A8A2CA /* FDProductInfoViewController.m in Sources */,
+				B5086376172BBD9100C72DD9 /* FDProductModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
