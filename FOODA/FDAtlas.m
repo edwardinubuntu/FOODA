@@ -8,6 +8,8 @@
 
 #import "FDAtlas.h"
 
+NSString * const kFDAppDomain = @"com.thepolydice.FOODA";
+
 NSString * const kFDAPIBaseURLString = @"http://";
 NSString * const kFDAPIGetPath = @"";
 NSString * const kFDAPIPostPath = @"";
