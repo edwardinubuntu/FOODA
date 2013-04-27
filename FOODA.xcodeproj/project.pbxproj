@@ -26,6 +26,7 @@
 		85221935569F45B99579FDD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5253F35D68434FCA94D5B477 /* libPods.a */; };
 		B5086373172BB84500C72DD9 /* FDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086372172BB84500C72DD9 /* FDProduct.m */; };
 		B5086376172BBD9100C72DD9 /* FDProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086375172BBD9100C72DD9 /* FDProductModel.m */; };
+		B5086379172BC16900C72DD9 /* FDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086378172BC16900C72DD9 /* FDAPIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		B5086372172BB84500C72DD9 /* FDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProduct.m; sourceTree = "<group>"; };
 		B5086374172BBD9100C72DD9 /* FDProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDProductModel.h; sourceTree = "<group>"; };
 		B5086375172BBD9100C72DD9 /* FDProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProductModel.m; sourceTree = "<group>"; };
+		B5086377172BC16900C72DD9 /* FDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDAPIClient.h; sourceTree = "<group>"; };
+		B5086378172BC16900C72DD9 /* FDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDAPIClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 		B5086370172BB81A00C72DD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5086377172BC16900C72DD9 /* FDAPIClient.h */,
+				B5086378172BC16900C72DD9 /* FDAPIClient.m */,
 				B5086371172BB84500C72DD9 /* FDProduct.h */,
 				B5086372172BB84500C72DD9 /* FDProduct.m */,
 				B5086374172BBD9100C72DD9 /* FDProductModel.h */,
@@ -348,6 +353,7 @@
 				B5086373172BB84500C72DD9 /* FDProduct.m in Sources */,
 				1C8DA47E172BC58800A8A2CA /* FDProductInfoViewController.m in Sources */,
 				B5086376172BBD9100C72DD9 /* FDProductModel.m in Sources */,
+				B5086379172BC16900C72DD9 /* FDAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
