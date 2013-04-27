@@ -14,5 +14,6 @@
 >
 
 @property (nonatomic, strong) ZBarReaderViewController *barReaderViewController;
+@property (nonatomic, strong) UIImageView *barCodeImageView;
 
 @end

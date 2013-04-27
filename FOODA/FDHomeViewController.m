@@ -37,11 +37,17 @@
     [tempSelf presentModalViewController:tempSelf.barReaderViewController animated:YES];
   }];
   self.navigationItem.rightBarButtonItem = cameraButtonItem;
+  
+  _barCodeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+
+  self.barCodeImageView.contentMode = UIViewContentModeScaleAspectFit;
+  [self.view addSubview:self.barCodeImageView];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  // Do any additional setup after loading the view.
+  self.barCodeImageView.center = self.view.center;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +55,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) imagePickerController: (UIImagePickerController*) reader didFinishPickingMediaWithInfo: (NSDictionary*) info {
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+  self.barCodeImageView.center = self.view.center;
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary*)info {
   // ADD: get the decode results
   id<NSFastEnumeration> results =
   [info objectForKey: ZBarReaderControllerResults];
@@ -61,8 +73,13 @@
   NSString *resultText = symbol.data;
   NSString *resultBarCodeType = symbol.typeName;
   
+  NSLog(@"BarCode Text: %@", resultText);
+  NSLog(@"BarCode Type : %@", resultBarCodeType);
+  
   // EXAMPLE: do something useful with the barcode image
   UIImage *resultImage = [info objectForKey: UIImagePickerControllerOriginalImage];
+  self.barCodeImageView.image = [resultImage copy];
+  [self.barCodeImageView setNeedsLayout];
   
   // ADD: dismiss the controller (NB dismiss from the *reader*!)
   [_barReaderViewController dismissModalViewControllerAnimated: YES];
