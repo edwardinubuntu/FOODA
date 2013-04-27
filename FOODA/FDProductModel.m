@@ -7,29 +7,33 @@
 //
 
 #import "FDProductModel.h"
-#import "AFJSONRequestOperation.h"
+#import "FDProduct.h"
+#import "FDAPIClient.h"
 
 @implementation FDProductModel
 
 + (void)getProductWithBarcode:(NSString *)barcode
                 barcodeFormat:(NSString *)barcodeFormat
-                      success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON))success
-                      failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON))failure {
+                      success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
+                      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler {
 
-  static NSString *API_GET_URL = @"";
-  NSURL *urlRequest = [NSURL URLWithString:API_GET_URL];
-  [AFJSONRequestOperation JSONRequestOperationWithRequest:(NSURLRequest *)urlRequest
-                                                  success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+  static NSString *API_GET_PATH = @"";
+  [[FDAPIClient sharedClient] postPath:API_GET_PATH
+                            parameters:@{}
+                               success:successHandler
+                               failure:failureHandler];
 
-                                                  } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                    
-                                                  }];
 }
 
 + (void)postProduc:(FDProduct *)product
-           Success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON))success
-           failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON))failure {
+           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
+           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler {
 
+  static NSString *API_POST_PATH = @"";
+  [[FDAPIClient sharedClient] postPath:API_POST_PATH
+                            parameters:@{}
+                               success:successHandler
+                               failure:failureHandler];
 }
 
 

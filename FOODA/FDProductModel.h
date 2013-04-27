@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FDAPIClient.h"
 
 @class FDProduct;
 
@@ -14,11 +15,11 @@
 
 + (void)getProductWithBarcode:(NSString *)barcode
                 barcodeFormat:(NSString *)barcodeFormat
-                      success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON))success
-                      failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON))failure;
+                      success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
+                      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler;
 
 + (void)postProduc:(FDProduct *)product
-           Success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON))success
-           failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON))failure;
+           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
+           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler;
 
 @end
