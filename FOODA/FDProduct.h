@@ -30,4 +30,8 @@
 // Designated initializer
 - (id)initWithBarcode:(NSString *)barcode barcodeFormat:(NSString *)barcodeFormat;
 
+- (id)initWithBarcode:(NSString *)barcode
+        barcodeFormat:(NSString *)barcodeFormat
+         barcodeImage:(UIImage *)barcodeImage;
+
 @end
