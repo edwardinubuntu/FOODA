@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarReaderViewController.h"
 
-@interface FDHomeViewController : UIViewController
+@interface FDHomeViewController : UIViewController <
+  ZBarReaderDelegate
+>
+
+@property (nonatomic, strong) ZBarReaderViewController *barReaderViewController;
 
 @end
