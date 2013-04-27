@@ -27,6 +27,7 @@
 		B5086373172BB84500C72DD9 /* FDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086372172BB84500C72DD9 /* FDProduct.m */; };
 		B5086376172BBD9100C72DD9 /* FDProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086375172BBD9100C72DD9 /* FDProductModel.m */; };
 		B5086379172BC16900C72DD9 /* FDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086378172BC16900C72DD9 /* FDAPIClient.m */; };
+		B5B16578172C1274009B7E72 /* FDAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B16577172C1274009B7E72 /* FDAtlas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		B5086375172BBD9100C72DD9 /* FDProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProductModel.m; sourceTree = "<group>"; };
 		B5086377172BC16900C72DD9 /* FDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDAPIClient.h; sourceTree = "<group>"; };
 		B5086378172BC16900C72DD9 /* FDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDAPIClient.m; sourceTree = "<group>"; };
+		B5B16576172C1274009B7E72 /* FDAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDAtlas.h; sourceTree = "<group>"; };
+		B5B16577172C1274009B7E72 /* FDAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDAtlas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,10 +178,12 @@
 		1C8DA477172BB58200A8A2CA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B5086370172BB81A00C72DD9 /* Models */,
-				1C8DA478172BB58B00A8A2CA /* ViewControllers */,
 				1C8DA451172BB01100A8A2CA /* AppDelegate.h */,
 				1C8DA452172BB01100A8A2CA /* AppDelegate.m */,
+				B5B16576172C1274009B7E72 /* FDAtlas.h */,
+				B5B16577172C1274009B7E72 /* FDAtlas.m */,
+				B5086370172BB81A00C72DD9 /* Models */,
+				1C8DA478172BB58B00A8A2CA /* ViewControllers */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				1C8DA47E172BC58800A8A2CA /* FDProductInfoViewController.m in Sources */,
 				B5086376172BBD9100C72DD9 /* FDProductModel.m in Sources */,
 				B5086379172BC16900C72DD9 /* FDAPIClient.m in Sources */,
+				B5B16578172C1274009B7E72 /* FDAtlas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

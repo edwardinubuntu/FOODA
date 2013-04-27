@@ -8,7 +8,6 @@
 
 #import "FDProductModel.h"
 #import "FDProduct.h"
-#import "FDAPIClient.h"
 
 @implementation FDProductModel
 
@@ -17,11 +16,13 @@
                       success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
                       failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler {
 
-  static NSString *API_GET_PATH = @"";
-  [[FDAPIClient sharedClient] postPath:API_GET_PATH
-                            parameters:@{}
-                               success:successHandler
-                               failure:failureHandler];
+  NSDictionary *param = @{ kFDProductJSONBarcodeKey : barcode,
+                           kFDProductJSONBarcodeFormatKey : barcodeFormat };
+
+  [[FDAPIClient sharedClient] getPath:kFDAPIGetPath
+                           parameters:param
+                              success:successHandler
+                              failure:failureHandler];
 
 }
 
@@ -29,9 +30,14 @@
            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler {
 
-  static NSString *API_POST_PATH = @"";
-  [[FDAPIClient sharedClient] postPath:API_POST_PATH
-                            parameters:@{}
+  NSDictionary *param = @{ kFDproductJSONUniqueID : product.productID,
+                           kFDProductJSONBarcodeKey : product.barcode,
+                           kFDProductJSONBarcodeFormatKey : product.barcodeFormat,
+                           kFDProductJSONTitleKey : product.title,
+                           kFDProductJSONDescription : product.productDescription };
+
+  [[FDAPIClient sharedClient] postPath:kFDAPIPostPath
+                            parameters:param
                                success:successHandler
                                failure:failureHandler];
 }

@@ -21,9 +21,8 @@
 - (id)initWithBarcode:(NSString *)barcode
         barcodeFormat:(NSString *)barcodeFormat
          barcodeImage:(UIImage *)barcodeImage {
-  if (self = [super init]) {
-    self.barcode = barcode;
-    self.barcodeFormat = barcodeFormat;
+
+  if (self = [self initWithBarcode:barcode barcodeFormat:barcodeFormat]) {
     self.barcodeImage = barcodeImage;
   }
   return self;

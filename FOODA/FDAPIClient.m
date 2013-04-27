@@ -9,8 +9,6 @@
 #import "FDAPIClient.h"
 #import "AFJSONRequestOperation.h"
 
-static NSString * const kFDAPIBaseURLString = @"http://";
-
 @implementation FDAPIClient
 
 + (FDAPIClient *)sharedClient {
