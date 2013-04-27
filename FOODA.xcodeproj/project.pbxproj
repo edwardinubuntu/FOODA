@@ -481,6 +481,7 @@
 		};
 		1C8DA475172BB01200A8A2CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216A7A4052E840168917A8CA /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FOODA.app/FOODA";
 				FRAMEWORK_SEARCH_PATHS = (
