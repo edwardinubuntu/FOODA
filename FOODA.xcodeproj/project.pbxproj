@@ -23,6 +23,7 @@
 		1C8DA46E172BB01200A8A2CA /* FOODATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA46D172BB01200A8A2CA /* FOODATests.m */; };
 		1C8DA47B172BB5A200A8A2CA /* FDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA47A172BB5A200A8A2CA /* FDHomeViewController.m */; };
 		85221935569F45B99579FDD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5253F35D68434FCA94D5B477 /* libPods.a */; };
+		B5086373172BB84500C72DD9 /* FDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086372172BB84500C72DD9 /* FDProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		1C8DA47A172BB5A200A8A2CA /* FDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDHomeViewController.m; sourceTree = "<group>"; };
 		216A7A4052E840168917A8CA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		5253F35D68434FCA94D5B477 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5086371172BB84500C72DD9 /* FDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDProduct.h; sourceTree = "<group>"; };
+		B5086372172BB84500C72DD9 /* FDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 		1C8DA477172BB58200A8A2CA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B5086370172BB81A00C72DD9 /* Models */,
 				1C8DA478172BB58B00A8A2CA /* ViewControllers */,
 				1C8DA451172BB01100A8A2CA /* AppDelegate.h */,
 				1C8DA452172BB01100A8A2CA /* AppDelegate.m */,
@@ -177,6 +181,15 @@
 				1C8DA47A172BB5A200A8A2CA /* FDHomeViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B5086370172BB81A00C72DD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5086371172BB84500C72DD9 /* FDProduct.h */,
+				B5086372172BB84500C72DD9 /* FDProduct.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +335,7 @@
 				1C8DA44F172BB01100A8A2CA /* main.m in Sources */,
 				1C8DA453172BB01100A8A2CA /* AppDelegate.m in Sources */,
 				1C8DA47B172BB5A200A8A2CA /* FDHomeViewController.m in Sources */,
+				B5086373172BB84500C72DD9 /* FDProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
