@@ -8,6 +8,8 @@
 
 #import "FDHomeViewController.h"
 #import "UIBarButtonItem+BlocksKit.h"
+#import "FDProductInfoViewController.h"
+#import "FDProduct.h"
 
 @interface FDHomeViewController ()
 
@@ -38,26 +40,16 @@
   }];
   self.navigationItem.rightBarButtonItem = cameraButtonItem;
   
-  _barCodeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
 
-  self.barCodeImageView.contentMode = UIViewContentModeScaleAspectFit;
-  [self.view addSubview:self.barCodeImageView];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  // Do any additional setup after loading the view.
-  self.barCodeImageView.center = self.view.center;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-  self.barCodeImageView.center = self.view.center;
-}
+
 
 #pragma mark - UIImagePickerControllerDelegate
 
@@ -69,20 +61,26 @@
   for(symbol in results)
     // EXAMPLE: just grab the first barcode
     break;
-
-  NSString *resultText = symbol.data;
-  NSString *resultBarCodeType = symbol.typeName;
   
-  NSLog(@"BarCode Text: %@", resultText);
-  NSLog(@"BarCode Type : %@", resultBarCodeType);
+  FDProduct *product = [[FDProduct alloc] init];
+
+  product.barcode = symbol.data;
+  product.barcodeFormat = symbol.typeName;
   
   // EXAMPLE: do something useful with the barcode image
   UIImage *resultImage = [info objectForKey: UIImagePickerControllerOriginalImage];
-  self.barCodeImageView.image = [resultImage copy];
-  [self.barCodeImageView setNeedsLayout];
+  product.barcodeImage = [resultImage copy];
   
   // ADD: dismiss the controller (NB dismiss from the *reader*!)
   [_barReaderViewController dismissModalViewControllerAnimated: YES];
+  
+  [self openProductInfo:product];
+}
+
+- (void)openProductInfo:(FDProduct *)product {
+  FDProductInfoViewController *productInfoViewController = [[FDProductInfoViewController alloc] init];
+  productInfoViewController.product = product;
+  [self.navigationController pushViewController:productInfoViewController animated:YES];
 }
 
 @end

@@ -22,6 +22,7 @@
 		1C8DA46B172BB01200A8A2CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C8DA469172BB01200A8A2CA /* InfoPlist.strings */; };
 		1C8DA46E172BB01200A8A2CA /* FOODATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA46D172BB01200A8A2CA /* FOODATests.m */; };
 		1C8DA47B172BB5A200A8A2CA /* FDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA47A172BB5A200A8A2CA /* FDHomeViewController.m */; };
+		1C8DA47E172BC58800A8A2CA /* FDProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA47D172BC58800A8A2CA /* FDProductInfoViewController.m */; };
 		85221935569F45B99579FDD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5253F35D68434FCA94D5B477 /* libPods.a */; };
 		B5086373172BB84500C72DD9 /* FDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B5086372172BB84500C72DD9 /* FDProduct.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		1C8DA46D172BB01200A8A2CA /* FOODATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FOODATests.m; sourceTree = "<group>"; };
 		1C8DA479172BB5A200A8A2CA /* FDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDHomeViewController.h; sourceTree = "<group>"; };
 		1C8DA47A172BB5A200A8A2CA /* FDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDHomeViewController.m; sourceTree = "<group>"; };
+		1C8DA47C172BC58800A8A2CA /* FDProductInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDProductInfoViewController.h; sourceTree = "<group>"; };
+		1C8DA47D172BC58800A8A2CA /* FDProductInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDProductInfoViewController.m; sourceTree = "<group>"; };
 		216A7A4052E840168917A8CA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		5253F35D68434FCA94D5B477 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5086371172BB84500C72DD9 /* FDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDProduct.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 			children = (
 				1C8DA479172BB5A200A8A2CA /* FDHomeViewController.h */,
 				1C8DA47A172BB5A200A8A2CA /* FDHomeViewController.m */,
+				1C8DA47C172BC58800A8A2CA /* FDProductInfoViewController.h */,
+				1C8DA47D172BC58800A8A2CA /* FDProductInfoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				1C8DA453172BB01100A8A2CA /* AppDelegate.m in Sources */,
 				1C8DA47B172BB5A200A8A2CA /* FDHomeViewController.m in Sources */,
 				B5086373172BB84500C72DD9 /* FDProduct.m in Sources */,
+				1C8DA47E172BC58800A8A2CA /* FDProductInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
