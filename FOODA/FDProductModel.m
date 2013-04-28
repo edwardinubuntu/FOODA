@@ -16,8 +16,8 @@
                       success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
                       failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler {
 
-  NSDictionary *param = @{ kFDProductJSONBarcodeKey : barcode,
-                           kFDProductJSONBarcodeFormatKey : barcodeFormat };
+  NSDictionary *param = @{ kFDJSONKeyForProductBarcode : barcode,
+                           kFDJSONKeyForProductBarcodeFormat : barcodeFormat };
 
   [[FDAPIClient sharedClient] getPath:kFDAPIGetPath
                            parameters:param
@@ -30,17 +30,16 @@
            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler {
 
-  NSDictionary *param = @{ kFDproductJSONUniqueID : product.productID,
-                           kFDProductJSONBarcodeKey : product.barcode,
-                           kFDProductJSONBarcodeFormatKey : product.barcodeFormat,
-                           kFDProductJSONTitleKey : product.title,
-                           kFDProductJSONDescription : product.productDescription };
+  NSDictionary *param = @{ kFDJSONKeyForProductID : product.productID,
+                           kFDJSONKeyForProductBarcode : product.barcode,
+                           kFDJSONKeyForProductBarcodeFormat : product.barcodeFormat,
+                           kFDJSONKeyForProductTitle : product.title,
+                           kFDJSONKeyForProductDescription : product.productDescription };
 
   [[FDAPIClient sharedClient] postPath:kFDAPIPostPath
                             parameters:param
                                success:successHandler
                                failure:failureHandler];
 }
-
 
 @end

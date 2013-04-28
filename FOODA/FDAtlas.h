@@ -16,11 +16,11 @@ extern NSString * const kFDAPIGetPath;
 extern NSString * const kFDAPIPostPath;
 
 // JSON attributes
-extern NSString * const kFDproductJSONUniqueID;
-extern NSString * const kFDProductJSONBarcodeKey;
-extern NSString * const kFDProductJSONBarcodeFormatKey;
-extern NSString * const kFDProductJSONTitleKey;
-extern NSString * const kFDProductJSONDescription;
+extern NSString * const kFDJSONKeyForProductID;
+extern NSString * const kFDJSONKeyForProductBarcode;
+extern NSString * const kFDJSONKeyForProductBarcodeFormat;
+extern NSString * const kFDJSONKeyForProductTitle;
+extern NSString * const kFDJSONKeyForProductDescription;
 
 typedef NS_ENUM (NSInteger, kFDErrorCode) {
   kFDErrorMissingParameter,

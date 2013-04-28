@@ -15,11 +15,11 @@ NSString * const kFDAPIGetPath = @"";
 NSString * const kFDAPIPostPath = @"";
 
 // TODO: confirm JSON attributes
-NSString * const kFDproductJSONUniqueID = @"id";
-NSString * const kFDProductJSONBarcodeKey = @"barcode";
-NSString * const kFDProductJSONBarcodeFormatKey = @"barcode_key";
-NSString * const kFDProductJSONTitleKey = @"title";
-NSString * const kFDProductJSONDescription = @"description";
+NSString * const kFDJSONKeyForProductID = @"id";
+NSString * const kFDJSONKeyForProductBarcode = @"barcode";
+NSString * const kFDJSONKeyForProductBarcodeFormat = @"barcode_key";
+NSString * const kFDJSONKeyForProductTitle = @"title";
+NSString * const kFDJSONKeyForProductDescription = @"description";
 
 @implementation FDAtlas
 
