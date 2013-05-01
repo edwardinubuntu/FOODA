@@ -31,11 +31,11 @@
 
 + (void)getProductWithBarcode:(NSString *)barcode
                 barcodeFormat:(NSString *)barcodeFormat
-                      success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
+                      success:(void (^)(AFHTTPRequestOperation *operation, id responseObject, FDProduct *receivedProduct))successHandler
                       failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler;
 
-+ (void)postProduc:(FDProduct *)product
-           success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
-           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler;
++ (void)postProduct:(FDProduct *)product
+            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))successHandler
+            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failureHandler;
 
 @end
